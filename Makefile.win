@@ -1,0 +1,76 @@
+# Project: LoliBot
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o Cunghoangdao.o Snakegame.o botngu.o demsongaysong.o totinh.o rain.o saobang.o dohoa.o totinh2.o yeuhayko.o chucngungon.o reply.o thoigian.o freeze.o stringcutter.o loaddata.o
+LINKOBJ  = main.o Cunghoangdao.o Snakegame.o botngu.o demsongaysong.o totinh.o rain.o saobang.o dohoa.o totinh2.o yeuhayko.o chucngungon.o reply.o thoigian.o freeze.o stringcutter.o loaddata.o
+LIBS     = -L"D:/Pro/DevC/Dev-Cpp/MinGW64/lib" -L"D:/Pro/DevC/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lwinmm -g3
+INCS     = -I"D:/Pro/DevC/Dev-Cpp/MinGW64/include" -I"D:/Pro/DevC/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Pro/DevC/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Pro/DevC/Dev-Cpp/MinGW64/include" -I"D:/Pro/DevC/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Pro/DevC/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Pro/DevC/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = LoliBot.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Cunghoangdao.o: Cunghoangdao.cpp
+	$(CPP) -c Cunghoangdao.cpp -o Cunghoangdao.o $(CXXFLAGS)
+
+Snakegame.o: Snakegame.cpp
+	$(CPP) -c Snakegame.cpp -o Snakegame.o $(CXXFLAGS)
+
+botngu.o: botngu.cpp
+	$(CPP) -c botngu.cpp -o botngu.o $(CXXFLAGS)
+
+demsongaysong.o: demsongaysong.cpp
+	$(CPP) -c demsongaysong.cpp -o demsongaysong.o $(CXXFLAGS)
+
+totinh.o: totinh.cpp
+	$(CPP) -c totinh.cpp -o totinh.o $(CXXFLAGS)
+
+rain.o: rain.cpp
+	$(CPP) -c rain.cpp -o rain.o $(CXXFLAGS)
+
+saobang.o: saobang.cpp
+	$(CPP) -c saobang.cpp -o saobang.o $(CXXFLAGS)
+
+dohoa.o: dohoa.cpp
+	$(CPP) -c dohoa.cpp -o dohoa.o $(CXXFLAGS)
+
+totinh2.o: totinh2.cpp
+	$(CPP) -c totinh2.cpp -o totinh2.o $(CXXFLAGS)
+
+yeuhayko.o: yeuhayko.cpp
+	$(CPP) -c yeuhayko.cpp -o yeuhayko.o $(CXXFLAGS)
+
+chucngungon.o: chucngungon.cpp
+	$(CPP) -c chucngungon.cpp -o chucngungon.o $(CXXFLAGS)
+
+reply.o: reply.cpp
+	$(CPP) -c reply.cpp -o reply.o $(CXXFLAGS)
+
+thoigian.o: thoigian.cpp
+	$(CPP) -c thoigian.cpp -o thoigian.o $(CXXFLAGS)
+
+freeze.o: freeze.cpp
+	$(CPP) -c freeze.cpp -o freeze.o $(CXXFLAGS)
+
+stringcutter.o: stringcutter.cpp
+	$(CPP) -c stringcutter.cpp -o stringcutter.o $(CXXFLAGS)
+
+loaddata.o: loaddata.cpp
+	$(CPP) -c loaddata.cpp -o loaddata.o $(CXXFLAGS)
